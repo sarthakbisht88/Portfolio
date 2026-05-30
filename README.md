@@ -38,12 +38,6 @@ A MERN-stack based e-commerce application featuring:
 - Responsive design
 - Backend API integration (ongoing)
 
-## Profiles
-
-- LinkedIn: https://linkedin.com/in/sarthakbisht88
-- GitHub: https://github.com/sarthakbisht88
-- LeetCode: https://leetcode.com/u/SarthakBisht
-- Codeforces: https://codeforces.com/profile/SarthakBisht
 
 ## Local Setup
 
