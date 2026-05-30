@@ -29,20 +29,11 @@ A responsive personal portfolio website built using HTML, CSS, and JavaScript to
 
 ## Projects Featured
 
-### Amazon Clone
-A MERN-stack based e-commerce application featuring:
-
-- Product browsing
-- Search and filtering
-- Shopping cart
-- Responsive design
-- Backend API integration (ongoing)
-
 
 ## Local Setup
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git
+git clone https://github.com/sarthakbisht88/Portfolio
 cd YOUR_REPOSITORY
 ```
 
