@@ -10,17 +10,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
   <style>
-    /* ============================================================
-       CSS VARIABLES — Edit these to retheme the entire site
-       LIGHT MODE: warm ivory + deep forest green + amber gold
-    ============================================================ */
+
     :root {
       --bg:           #FAEBCA;
       --surface:      #F2DBAA ;
       --surface2:     #F2DBAA;
-      --accent:       #1A6B4A;       /* deep forest green */
-      --accent2:      #d4492a;       /* amber gold */
-      --accent3:      #8B2FC9;       /* electric purple — used sparingly */
+      --accent:       #1A6B4A;      
+      --accent2:      #d4492a;       
+      --accent3:      #8B2FC9;       
       --text:         #141412;
       --text-muted:   #5C5A54;
       --border:       #D4CFC5;
@@ -31,7 +28,6 @@
       --transition:   0.26s cubic-bezier(0.4, 0, 0.2, 1);
       --max-width:    1160px;
 
-      /* Section cursor colors — change per section */
       --cursor-hero:      #1A6B4A;
       --cursor-about:     #D4852A;
       --cursor-exp:       #8B2FC9;
@@ -41,24 +37,20 @@
       --cursor-edu:       #1A6B4A;
     }
 
-    /* DARK MODE — rich, bright, readable */
     body.dark {
       --bg:           #2d2d29;
       --surface:      #1A1A17;
       --surface2:     #232320;
-      --accent:       #3DD68C;       /* bright mint green */
-      --accent2:      #F0A040;       /* warm amber */
-      --accent3:      #B36EF5;       /* lavender */
-      --text:         #F5F2EB;       /* near-white warm */
-      --text-muted:   #A8A49C;       /* clearly readable muted */
+      --accent:       #3DD68C;       
+      --accent2:      #F0A040;      
+      --accent3:      #B36EF5;      
+      --text:         #F5F2EB;       
+      --text-muted:   #A8A49C;       
       --border:       #2E2D28;
       --nav-bg:       rgba(15,15,13,0.92);
     }
     body.dark nav { background: var(--nav-bg); }
 
-    /* ============================================================
-       RESET & BASE
-    ============================================================ */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body {
@@ -75,9 +67,6 @@
     img { display: block; max-width: 100%; }
     ul { list-style: none; }
 
-    /* ============================================================
-       CUSTOM CURSOR — changes color per section as you scroll
-    ============================================================ */
     #cursor-dot {
       position: fixed; top: 0; left: 0; z-index: 9999;
       width: 9px; height: 9px; border-radius: 50%;
@@ -98,9 +87,6 @@
     body.cursor-hover #cursor-dot  { width: 13px; height: 13px; }
     body.cursor-hover #cursor-ring { width: 54px; height: 54px; opacity: 0.85; border-radius: 30%; }
 
-    /* ============================================================
-       LAYOUT
-    ============================================================ */
     .container {
       width: 100%;
       max-width: var(--max-width);
@@ -121,9 +107,6 @@
     }
     .section-title em { font-style: italic; color: var(--accent); }
 
-    /* ============================================================
-       NAVBAR
-    ============================================================ */
     nav {
       position: fixed; top: 0; left: 0; right: 0; z-index: 200;
       padding: 18px 0;
@@ -164,9 +147,6 @@
     .nav-cta::after { display: none !important; }
     .nav-cta:hover { opacity: 0.88; transform: translateY(-1px) !important; }
 
-    /* ============================================================
-       HERO
-    ============================================================ */
     #hero {
       min-height: 100vh;
       display: flex; align-items: center;
@@ -186,8 +166,6 @@
     .hero-eyebrow::before {
       content: ''; width: 28px; height: 1.5px; background: var(--accent2);
     }
-
-    /* Dynamic name — morphing text effect */
     .hero-name {
       font-family: var(--font-display);
       font-size: clamp(46px, 6.5vw, 74px);
@@ -242,7 +220,6 @@
     }
     .hero-meta-item .label { font-size: 12px; color: var(--text-muted); }
 
-    /* Circular photo */
     .hero-photo-wrap { display: flex; justify-content: center; align-items: center; }
     .hero-photo-ring {
       position: relative; width: 290px; height: 290px;
@@ -254,8 +231,6 @@
   inset: -18px;
 
   border-radius: 50%;
-
-  /* thicker + more visible */
   border: 3px dashed var(--accent);
 
   opacity: 0.9;
@@ -295,9 +270,6 @@
       color: var(--accent); opacity: 0.35;
     }
 
-    /* ============================================================
-       CONTACT STRIP
-    ============================================================ */
     .contact-strip {
       background: var(--surface);
       border-top: 1px solid var(--border);
@@ -317,9 +289,6 @@
     .phone-hint { font-size: 11px; color: var(--accent2); margin-left: 6px; font-weight: 500; }
     .phone-blur.revealed ~ .phone-hint { display: none; }
 
-    /* ============================================================
-       SOCIAL STRIP
-    ============================================================ */
     .social-strip { padding: 14px 0; border-top: 1px solid var(--border); }
     .social-inner { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }
     .social-link {
@@ -328,9 +297,6 @@
       padding: 7px 14px; border-radius: 8px; border: 1px solid var(--border);
       transition: all var(--transition);
     }
-    /* ============================================================
-   SOCIAL LINKS
-============================================================ */
 
 .social-link {
   display: inline-flex;
@@ -343,7 +309,6 @@
   padding: 9px 16px;
   border-radius: 10px;
 
-  /* Filled green style */
   background: var(--accent);
   color: #fff;
 
@@ -366,9 +331,6 @@
   box-shadow: 0 8px 24px rgba(26,107,74,0.22);
 }
 
-    /* ============================================================
-       ABOUT
-    ============================================================ */
     #about { background: var(--surface); transition: background 0.4s; }
     .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: start; }
     .about-text { font-size: 15.5px; color: var(--text-muted); line-height: 1.92; }
@@ -389,10 +351,7 @@
       text-transform: uppercase; font-weight: 600;
       color: var(--accent2); margin-top: 14px; margin-bottom: 2px;
     }
-
-    /* ============================================================
-       EXPERIENCE — single column timeline
-    ============================================================ */
+    
     #experience { }
     .timeline { position: relative; max-width: 800px; }
     .timeline::before {
@@ -434,9 +393,6 @@
       color: var(--accent2); font-size: 11px;
     }
 
-    /* ============================================================
-       PROJECTS
-    ============================================================ */
     #projects { background: var(--surface); transition: background 0.4s; }
     .projects-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 22px; }
     .project-card {
@@ -472,9 +428,6 @@
       transition: background 0.4s, color 0.4s;
     }
 
-    /* ============================================================
-       ACHIEVEMENTS — single column
-    ============================================================ */
     #certs { }
     .achieve-list { max-width: 720px; }
     .achieve-item {
@@ -491,15 +444,9 @@
     .cert-info .cert-name { font-size: 15px; font-weight: 500; }
     .cert-info .cert-org { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
 
-    /* ============================================================
-       HOBBIES
-    ============================================================ */
     #hobbies { background: var(--surface); transition: background 0.4s; }
     .hobbies-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; }
 
-    /* ============================================================
-       EDUCATION — single stacked column
-    ============================================================ */
     #education { }
     .edu-stack { display: flex; flex-direction: column; gap: 20px; max-width: 720px; }
     .edu-card {
@@ -520,12 +467,6 @@
     .edu-meta span { font-size: 12px; color: var(--text-muted); }
     .edu-cgpa { font-weight: 600; color: var(--accent2) !important; }
 
-    /* ============================================================
-       CONTACT POPUP
-    ============================================================ */
-    /* ============================================================
-   CONTACT POPUP — Black + Pink Theme
-============================================================ */
 
 .contact-popup {
   position: fixed;
@@ -638,14 +579,10 @@
   transform: rotate(90deg);
 }
 
-    /* ============================================================
-   FOOTER
-============================================================ */
 footer {
   padding: 40px 0;
   border-top: 1px solid var(--border);
 
-  /* single elegant color */
   background: var(--surface2);
 
   transition:
@@ -681,10 +618,6 @@ footer {
 .footer-note a:hover {
   color: var(--accent);
 }
-
-    /* ============================================================
-       THEME TOGGLE
-    ============================================================ */
     #theme-toggle {
       position: fixed; bottom: 32px; right: 32px; z-index: 300;
       width: 48px; height: 48px; border-radius: 50%;
@@ -696,9 +629,6 @@ footer {
     }
     #theme-toggle:hover { background: var(--accent2); transform: scale(1.1) rotate(15deg); }
 
-    /* ============================================================
-       SCROLL REVEAL
-    ============================================================ */
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(22px); }
       to   { opacity: 1; transform: translateY(0); }
@@ -712,9 +642,6 @@ footer {
     .reveal-delay-2 { transition-delay: 0.2s; }
     .reveal-delay-3 { transition-delay: 0.3s; }
 
-    /* ============================================================
-       RESPONSIVE
-    ============================================================ */
     @media (max-width: 900px) {
       .hero-grid { grid-template-columns: 1fr; }
       .hero-photo-wrap { order: -1; }
@@ -736,7 +663,6 @@ footer {
   <div id="cursor-ring"></div>
   <button id="theme-toggle" title="Toggle theme" aria-label="Toggle theme">🌙</button>
 
-  <!-- ============================================================ NAVBAR -->
   <nav id="navbar">
     <div class="container">
       <div class="nav-inner">
@@ -754,7 +680,6 @@ footer {
     </div>
   </nav>
 
-  <!-- ============================================================ CONTACT BAR -->
   <div class="contact-strip">
     <div class="container">
       <div class="contact-strip-inner">
@@ -775,17 +700,15 @@ footer {
     </div>
   </div>
 
-  <!-- ============================================================ HERO -->
   <section id="hero" data-cursor="#1A6B4A">
     <div class="container">
       <div class="hero-grid">
         <div class="hero-left">
           <div class="hero-eyebrow">Available for opportunities</div>
-          <!-- Dynamic name: "Sarthak" is static, second line cycles through words -->
           <h1 class="hero-name">
             <span class="static-part">Sarthak</span>
             <span class="dynamic-wrap" id="dynamic-name">
-              <!-- Words injected by JS -->
+              
             </span>
           </h1>
           <p class="hero-tagline">
@@ -806,7 +729,7 @@ footer {
             <div class="hero-meta-item"><div class="num">3+</div><div class="label">Projects </div></div>
           </div>
         </div>
-        <!-- Circular photo — replace src with your hosted photo URL -->
+        
         <div class="hero-photo-wrap">
           <div class="hero-photo-ring">
             <div class="hero-photo">
@@ -820,7 +743,6 @@ footer {
     </div>
   </section>
 
-  <!-- Social links -->
   <div class="social-strip">
     <div class="container">
       <div class="social-inner">
@@ -848,7 +770,7 @@ footer {
     </div>
   </div>
 
-  <!-- ============================================================ ABOUT -->
+  
   <section id="about" data-cursor="#D4852A">
     <div class="container">
       <div class="about-grid">
@@ -880,7 +802,6 @@ footer {
     </div>
   </section>
 
-  <!-- ============================================================ EXPERIENCE -->
   <section id="experience" data-cursor="#8B2FC9">
     <div class="container">
       <div class="section-label reveal">Experience</div>
@@ -903,15 +824,10 @@ footer {
             </ul>
           </div>
         </div>
-        <!--
-          ADD MORE EXPERIENCE: copy the .timeline-item block above and paste here.
-          Update the role title, company, date, and bullet points.
-        -->
       </div>
     </div>
   </section>
 
-  <!-- ============================================================ PROJECTS -->
   <section id="projects" data-cursor="#C42D2D">
     <div class="container">
       <div class="section-label reveal">Projects</div>
@@ -967,16 +883,12 @@ footer {
           </div>
         </div>
 
-        <!--
-          ADD A PROJECT: copy the .project-card above, paste here.
-          Update title, GitHub href, description, and tags.
-        -->
+      
 
       </div>
     </div>
   </section>
 
-  <!-- ============================================================ ACHIEVEMENTS (no certs) -->
   <section id="certs" data-cursor="#1A6B4A">
     <div class="container">
       <div class="section-label reveal">Achievements</div>
@@ -1026,15 +938,11 @@ footer {
           </div>
         </div>
 
-        <!--
-          ADD ACHIEVEMENT: copy an .achieve-item, paste here. Update emoji, name, org.
-        -->
 
       </div>
     </div>
   </section>
-
-  <!-- ============================================================ HOBBIES -->
+  
   <section id="hobbies" data-cursor="#D4852A">
     <div class="container">
       <div class="section-label reveal">Tech Related</div>
@@ -1089,7 +997,6 @@ footer {
     </div>
   </section>
 
-  <!-- ============================================================ EDUCATION — stacked single column -->
   <section id="education" data-cursor="#1A6B4A">
     <div class="container">
       <div class="section-label reveal">Education</div>
@@ -1115,7 +1022,6 @@ footer {
     </div>
   </section>
 
-  <!-- ============================================================ FOOTER -->
   <footer>
     <div class="container">
       <div class="footer-inner">
@@ -1130,7 +1036,6 @@ footer {
     </div>
   </footer>
 
-  <!-- ============================================================ CONTACT POPUP -->
   <div id="contact-popup" class="contact-popup">
     <div class="contact-popup-box">
       <button class="close-popup" onclick="closeContactPopup()">×</button>
@@ -1144,9 +1049,7 @@ footer {
     </div>
   </div>
 
-  <!-- ============================================================ JAVASCRIPT -->
   <script>
-    /* ---- Dynamic name morphing --------------------------------- */
     const words = ['Bisht', 'Developer', 'Engineer', 'Builder', 'Coder'];
     const wrap = document.getElementById('dynamic-name');
     let currentIdx = 0;
@@ -1167,7 +1070,6 @@ footer {
       allWords[currentIdx].classList.add('active');
     }, 2400);
 
-    /* ---- Cursor — changes color based on visible section ------- */
     const dot  = document.getElementById('cursor-dot');
     const ring = document.getElementById('cursor-ring');
     let mouseX = 0, mouseY = 0;
@@ -1188,7 +1090,7 @@ footer {
       requestAnimationFrame(animateCursor);
     })();
 
-    /* Section cursor colors */
+   
     const sectionCursors = {
       'hero':       '#1A6B4A',
       'about':      '#D4852A',
@@ -1217,7 +1119,7 @@ footer {
     }, { threshold: 0.35 });
     sectionEls.forEach(s => sectionObserver.observe(s));
 
-    /* Grow on hover */
+   
     document.addEventListener('mouseover', e => {
       if (e.target.matches('a, button, .skill-tag, .project-card, .btn, .social-link')) {
         document.body.classList.add('cursor-hover');
@@ -1229,16 +1131,13 @@ footer {
       }
     });
 
-    /* ---- Navbar scroll --------------------------------------- */
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
       navbar.classList.toggle('scrolled', window.scrollY > 40);
     }, { passive: true });
 
-    /* ---- Phone reveal ---------------------------------------- */
     function revealPhone(el) { el.classList.add('revealed'); }
 
-    /* ---- Scroll reveal --------------------------------------- */
     const revealEls = document.querySelectorAll('.reveal');
     const revealObserver = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -1250,18 +1149,15 @@ footer {
     }, { threshold: 0.1 });
     revealEls.forEach(el => revealObserver.observe(el));
 
-    /* ---- Theme toggle ---------------------------------------- */
     const themeBtn = document.getElementById('theme-toggle');
     let dark = false;
     themeBtn.addEventListener('click', () => {
       dark = !dark;
       document.body.classList.toggle('dark', dark);
       themeBtn.textContent = dark ? '☀️' : '🌙';
-      /* Also update cursor to current section's dark-friendly version */
       updateCursorColor(dark ? '#3DD68C' : currentColor);
     });
 
-    /* ---- Hero subtle parallax -------------------------------- */
     window.addEventListener('scroll', () => {
       const heroLeft = document.querySelector('.hero-left');
       if (heroLeft && window.scrollY < window.innerHeight) {
@@ -1269,7 +1165,6 @@ footer {
       }
     }, { passive: true });
 
-    /* ---- Contact popup --------------------------------------- */
     function openContactPopup() {
       document.getElementById('contact-popup').style.display = 'flex';
     }
